@@ -130,7 +130,7 @@ public class GraphData {
 	 * @param edgeLabel2Rank
 	 *            边排名
 	 */
-	public void reLabelByRank(int[] nodeLabel2Rank, int[] edgeLabel2Rank) {
+	public void reLabelByRank(int[] nodeLabel2Rank, int[] edgeLabel2Rank ) {
 		int label = 0;
 		int count = 0;
 		int temp = 0;
@@ -155,9 +155,12 @@ public class GraphData {
 				edgeLabels.set(i, edgeLabel2Rank[label]);
 
 				// 对此点做x,y的id号替换
+                int x, y;
 				temp = edgeX.get(i);
+				x = oldId2New[temp];
 				edgeX.set(i, oldId2New[temp]);
 				temp = edgeY.get(i);
+				y = oldId2New[temp];
 				edgeY.set(i, oldId2New[temp]);
 			}
 		}

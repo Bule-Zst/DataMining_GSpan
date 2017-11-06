@@ -15,12 +15,57 @@ public class Graph {
 	ArrayList<ArrayList<Integer>> edgeLabels;
 	// 边2头的节点id号,在这里可以理解为下标号
 	ArrayList<ArrayList<Integer>> edgeNexts;
+	// 是否是图i的子图
+    boolean[] isFromGroups;
+
+	boolean[][] isVis;
 
 	public Graph() {
 		nodeLabels = new ArrayList<>();
 		edgeLabels = new ArrayList<>();
 		edgeNexts = new ArrayList<>();
 	}
+
+	public double getSup( ArrayList<Graph> totalGraphs ) {
+	    int size = totalGraphs.size();
+	    initIsFromGroups( size );
+	    for( int i = 0; i < size; ++i ) {
+	        Graph graph = totalGraphs.get( i );
+	        for( int j = 0; j < nodeLabels.size(); ++j ) {
+	            for( int k = 0; k < edgeLabels.get(j).size(); ++k ) {
+	                int u = j;
+	                int v = edgeLabels.get(j).get(k);
+	                int w = edgeLabels.get(j).get(k);
+	                if( !graph.hasEdge( u, v, w ) ) {
+	                    isFromGroups[i] = false;
+	                    break;
+                    }
+                }
+                if( !isFromGroups[i] ) {
+	                break;
+                }
+            }
+        }
+        int cnt = 0;
+        for( int i = 0; i < size; ++i ) {
+	        if( isFromGroups[i] ) {
+	            cnt += 1;
+            }
+        }
+        return 1.0 * cnt / size;
+    }
+
+    private void initIsFromGroups( int groupsSize ) {
+	    isFromGroups = new boolean[groupsSize];
+	    for( int i = 0; i < groupsSize; ++i ) {
+	        isFromGroups[i] = true;
+        }
+    }
+
+    public void initIsVis() {
+	    int nodeNum = nodeLabels.size();
+	    isVis = new boolean[nodeNum][nodeNum];
+    }
 
 	public ArrayList<Integer> getNodeLabels() {
 		return nodeLabels;
@@ -141,7 +186,10 @@ public class Graph {
 		Graph graph = new Graph();
 
 		
-		// 构造一个图需要知道3点，1.图中有哪些点2.图中的每个点周围连着哪些点3.每个点周围连着哪些边
+		// 构造一个图需要知道3点，
+		// 1.图中有哪些点
+        // 2.图中的每个点周围连着哪些点
+        // 3.每个点周围连着哪些边
 		for (int i = 0; i < gd.getNodeVisibles().size(); i++) {
 			if (gd.getNodeVisibles().get(i)) {
 				graph.getNodeLabels().add(gd.getNodeLabels().get(i));

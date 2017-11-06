@@ -6,7 +6,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.text.MessageFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,12 +42,17 @@ public class GSpanTool {
 	private EdgeFrequency ef;
 	// 节点的频度
 	private int[] freqNodeLabel;
+	// 两节点同时出现的频度
+    private int[][] freqNodeLabels;
 	// 边的频度
 	private int[] freqEdgeLabel;
 	// 重新标号之后的点的标号数
 	private int newNodeLabelNum = 0;
 	// 重新标号后的边的标号数
 	private int newEdgeLabelNum = 0;
+    private double meanWeight;
+    // 重新编号后节点的个数
+    private int nodeNum;
 
 	public GSpanTool(String filePath, double minSupportRate) {
 		this.filePath = filePath;
@@ -60,15 +64,15 @@ public class GSpanTool {
 	 * 从文件中读取数据
 	 */
 	private void readDataFile() {
-		File file = new File(filePath);
-		ArrayList<String[]> dataArray = new ArrayList<String[]>();
+        File file = new File(filePath);
+		ArrayList<String[]> dataArray = new ArrayList<>();
 
 		try {
 			BufferedReader in = new BufferedReader(new FileReader(file));
 			String str;
 			String[] tempArray;
 			while ((str = in.readLine()) != null) {
-				tempArray = str.split(" ");
+                tempArray = str.split(" ");
 				dataArray.add(tempArray);
 			}
 			in.close();
@@ -244,7 +248,7 @@ public class GSpanTool {
 		}
 
 		for (GraphData gd : totalGraphDatas) {
-			gd.reLabelByRank(nodeLabel2Rank, edgeLabel2Rank);
+			gd.reLabelByRank( nodeLabel2Rank, edgeLabel2Rank );
 		}
 
 		// 根据排名找出小于支持度值的最大排名值
@@ -277,13 +281,15 @@ public class GSpanTool {
 		resultGraphs = new ArrayList<>();
 		totalGraphs = new ArrayList<>();
 		// 通过图数据构造图结构
-		//得到初始图集
+		// 得到初始图集
 		for (GraphData gd : totalGraphDatas) {
 			g = new Graph();
-			g = g.constructGraph(gd);
-			totalGraphs.add(g);
+			g = g.constructGraph( gd );
+			totalGraphs.add( g );
 		}
 
+		freqEdgeLabel = new int[newNodeLabelNum];
+		freqNodeLabels = new int[newNodeLabelNum][newNodeLabelNum];
 		// 根据新的点边的标号数初始化边频繁度对象
 		//newNodeLabelNum：重新标号之后的点的标号数
 		//newEdgeLabelNum:重新标号之后的边的标号数
@@ -295,11 +301,16 @@ public class GSpanTool {
 						//	参数： 边的一端的节点标号， 边的标号，边的另外一端节点标号
 						if (tempG.hasEdge(i, j, k)) {
 							ef.edgeFreqCount[i][j][k]++;
+							freqNodeLabel[i] += 1;
+							freqNodeLabel[k] += 1;
+							freqNodeLabels[i][k] += 1;
+							freqNodeLabels[k][i] += 1;
 						}
 					}
 				}
 			}
 		}
+		calMeanWeight();
 
 		Edge edge;
 		GraphCode gc;
@@ -340,7 +351,26 @@ public class GSpanTool {
 		printResultGraphInfo();
 	}
 
-	/**
+    private void calMeanWeight() {
+	    double maxEdgeWeight = -1;
+	    double minEdgeWeight = Double.MAX_VALUE;
+        for( int i = 0; i < newNodeLabelNum; ++i ) {
+            for( int j = 0; j < newNodeLabelNum; ++j ) {
+                double weight = calEdgeWeight( i, j );
+                maxEdgeWeight = Math.max( maxEdgeWeight, weight );
+                minEdgeWeight = Math.min( minEdgeWeight, weight );
+            }
+        }
+        meanWeight = ( maxEdgeWeight + minEdgeWeight ) / 2;
+    }
+
+    private double calEdgeWeight(int i, int j) {
+	    double dividend = freqNodeLabels[i][j] - freqNodeLabel[i] * freqNodeLabel[j];
+	    double divisor = Math.sqrt( ( freqNodeLabels[i][j] ) * ( 1 - freqNodeLabel[i] * ( 1 - freqNodeLabel[j] ) ) );
+	    return dividend / divisor;
+    }
+
+    /**
 	 * 进行频繁子图的挖掘
 	 * 
 	 * @param gc
@@ -348,7 +378,7 @@ public class GSpanTool {
 	 * @param next
 	 *            图所含的点的个数
 	 */
-	public void subMining(GraphCode gc, int next) {
+	private void subMining(GraphCode gc, int next) {
 		Edge e;
 		Graph graph = new Graph();
 		int id1;
@@ -381,7 +411,10 @@ public class GSpanTool {
 		}
 
 		// 如果当前是最小编码则将此图加入到结果集中
-		resultGraphs.add(graph);
+		if( judgeIsMoreMeanWeight( graph ) ) {
+            resultGraphs.add(graph);
+        }
+
 		
 		Edge e1;
 		ArrayList<Integer> gIds;
@@ -435,14 +468,49 @@ public class GSpanTool {
 			}
 		}
 	}
-	
-	/**
+
+    private boolean judgeIsMoreMeanWeight(Graph graph) {
+	    if( calWeight( graph ) * graph.getSup(totalGraphs) >= meanWeight * minSupportRate ) {
+	        return true;
+        } else {
+	        return false;
+        }
+    }
+
+    private double calWeight(Graph graph) {
+	    graph.initIsVis();
+        int edgeNum = 0;
+        double sum = 0;
+        for( int i = 0; i < graph.edgeNexts.size(); ++i ) {
+            for( int j = 0; j < graph.edgeNexts.get(i).size(); ++j ) {
+                int u = i;
+                int v = graph.edgeNexts.get(i).get(j);
+                if( u > v ) {
+                    int tmp = u;
+                    u = v;
+                    v = tmp;
+                }
+                if( !graph.isVis[u][v] ) {
+                    graph.isVis[u][v] = true;
+                    sum += calEdgeWeight( u, v );
+                    edgeNum += 1;
+                }
+            }
+        }
+        return sum / edgeNum;
+    }
+
+    /**
 	 * 输出频繁子图结果信息
 	 */
 	 
 
-	public void printResultGraphInfo(){
-		System.out.println(MessageFormat.format("挖掘出的频繁子图的个数为：{0}个", resultGraphs.size()));
+	private void printResultGraphInfo(){
+	    int size = resultGraphs.size();
+		System.out.println(MessageFormat.format("挖掘出的频繁子图的个数为：{0}个", size));
+		for( int i = 0; i < size; ++i ) {
+            System.out.println( resultGraphs.get(i).nodeLabels );
+        }
 	}
 	
 	/*public void printResultGraphInfo(){

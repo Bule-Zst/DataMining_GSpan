@@ -485,14 +485,18 @@ public class GSpanTool {
             for( int j = 0; j < graph.edgeNexts.get(i).size(); ++j ) {
                 int u = i;
                 int v = graph.edgeNexts.get(i).get(j);
+                // 获取到的是id
                 if( u > v ) {
                     int tmp = u;
                     u = v;
                     v = tmp;
                 }
+                int uLabel = graph.nodeLabels.get(u);
+                int vLabel = graph.nodeLabels.get(v);
+                // 转化成标号
                 if( !graph.isVis[u][v] ) {
                     graph.isVis[u][v] = true;
-                    sum += calEdgeWeight( u, v );
+                    sum += calEdgeWeight( uLabel, vLabel );
                     edgeNum += 1;
                 }
             }

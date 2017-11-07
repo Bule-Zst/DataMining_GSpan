@@ -12,7 +12,7 @@ public class Client {
 		//v 1 0：v表示节点；  1表示节点的id号标识；0表示点标号
 		//e 4 5 3：e表示边；4和5分别是边的id号标识；3表示边的标号
 //		String filePath = "D:\\reallyData.txt";
-		String filePath = "E:\\projectTeam\\挖掘\\DataMining_GSpan\\src\\DataMining\\reallyData.txt";
+		String filePath = "E:\\projectTeam\\挖掘\\DataMining_GSpan\\src\\DataMining\\input.txt";
 		//最小支持度率
 		double minSupportRate = 0.3;
 		//GSpanTool tool = new GSpanTool();

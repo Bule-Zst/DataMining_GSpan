@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a2d6bb0-8f22-44cd-bceb-e026e10f3da2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataMining/Client.java" afterPath="$PROJECT_DIR$/src/DataMining/Client.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataMining/GSpanTool.java" afterPath="$PROJECT_DIR$/src/DataMining/GSpanTool.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -21,8 +21,8 @@
       <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataMining/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+            <state relative-caret-position="200">
+              <caret line="13" column="20" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -31,20 +31,31 @@
       <file leaf-file-name="GSpanTool.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DataMining/GSpanTool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="495" column="24" lean-forward="false" selection-start-line="495" selection-start-column="24" selection-end-line="495" selection-end-column="24" />
+            <state relative-caret-position="360">
+              <caret line="344" column="31" lean-forward="false" selection-start-line="344" selection-start-column="31" selection-end-line="344" selection-end-column="31" />
               <folding>
                 <element signature="docComment;class#GSpanTool#0" expanded="false" />
+                <element signature="method#GSpanTool#0;class#GSpanTool#0" expanded="false" />
                 <element signature="docComment;method#readDataFile#0;class#GSpanTool#0" expanded="false" />
+                <element signature="method#readDataFile#0;class#GSpanTool#0" expanded="false" />
                 <element signature="docComment;method#calFrequentAndRemove#0;class#GSpanTool#0" expanded="false" />
+                <element signature="method#calFrequentAndRemove#0;class#GSpanTool#0" expanded="false" />
                 <element signature="e#2225#2233#0" expanded="false" />
+                <element signature="e#3568#3587#0" expanded="false" />
                 <element signature="docComment;method#sortAndReLabel#0;class#GSpanTool#0" expanded="false" />
+                <element signature="method#sortAndReLabel#0;class#GSpanTool#0" expanded="false" />
                 <element signature="e#4869#4880#0" expanded="false" />
+                <element signature="docComment;method#freqGraphMining#0;class#GSpanTool#0" expanded="false" />
                 <element signature="e#6344#6357#0" expanded="false" />
                 <element signature="e#6600#6622#0" expanded="false" />
-                <element signature="e#7514#7551#0" expanded="false" />
+                <element signature="e#7559#7596#0" expanded="false" />
+                <element signature="method#calMeanWeight#0;class#GSpanTool#0" expanded="false" />
+                <element signature="method#calEdgeWeight#0;class#GSpanTool#0" expanded="false" />
                 <element signature="docComment;method#subMining#0;class#GSpanTool#0" expanded="false" />
+                <element signature="method#judgeIsMoreMeanWeight#0;class#GSpanTool#0" expanded="false" />
+                <element signature="method#calWeight#0;class#GSpanTool#0" expanded="false" />
                 <element signature="docComment;method#printResultGraphInfo#0;class#GSpanTool#0" expanded="false" />
+                <element signature="method#printResultGraphInfo#0;class#GSpanTool#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -53,7 +64,7 @@
       <file leaf-file-name="GraphData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataMining/GraphData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
+            <state relative-caret-position="1840">
               <caret line="92" column="16" lean-forward="false" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
               <folding>
                 <element signature="docComment;class#GraphData#0" expanded="false" />
@@ -70,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/src/DataMining/reallyData.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="760">
-              <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+              <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -79,7 +90,7 @@
       <file leaf-file-name="SubChildTraveler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataMining/SubChildTraveler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
+            <state relative-caret-position="1600">
               <caret line="41" column="16" lean-forward="false" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
               <folding />
             </state>
@@ -89,7 +100,7 @@
       <file leaf-file-name="Edge.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataMining/Edge.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
+            <state relative-caret-position="1000">
               <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
               <folding />
             </state>
@@ -99,7 +110,7 @@
       <file leaf-file-name="Graph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataMining/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-600">
+            <state relative-caret-position="760">
               <caret line="28" column="57" lean-forward="false" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
               <folding>
                 <element signature="docComment;class#Graph#0" expanded="false" />
@@ -123,7 +134,7 @@
       <file leaf-file-name="GraphCode.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataMining/GraphCode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
+            <state relative-caret-position="960">
               <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
               <folding>
                 <element signature="e#473#474#0" expanded="true" />
@@ -169,7 +180,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-8" />
     <option name="width" value="1932" />
     <option name="height" value="1038" />
@@ -252,9 +263,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -277,13 +285,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="E:/Java/Intellij IDEA Personal File/Try" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../电信/njtel/njtel" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -426,14 +437,18 @@
       <workItem from="1509892681335" duration="503000" />
       <workItem from="1509946430340" duration="7299000" />
       <workItem from="1510040262299" duration="3083000" />
+      <workItem from="1510110054889" duration="665000" />
+      <workItem from="1510216488526" duration="226000" />
+      <workItem from="1510364364690" duration="133000" />
+      <workItem from="1510402615651" duration="441000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26479000" />
+    <option name="totallyTimeSpent" value="27944000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1932" height="1038" extended-state="0" />
+    <frame x="-8" y="0" width="1932" height="1038" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -569,16 +584,27 @@
           <caret line="73" column="27" lean-forward="false" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
           <folding>
             <element signature="docComment;class#GSpanTool#0" expanded="false" />
+            <element signature="method#GSpanTool#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#readDataFile#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#readDataFile#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#calFrequentAndRemove#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calFrequentAndRemove#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#2225#2233#0" expanded="false" />
+            <element signature="e#3568#3587#0" expanded="false" />
             <element signature="docComment;method#sortAndReLabel#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#sortAndReLabel#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#4869#4880#0" expanded="false" />
+            <element signature="docComment;method#freqGraphMining#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#6344#6357#0" expanded="false" />
             <element signature="e#6600#6622#0" expanded="false" />
-            <element signature="e#7514#7551#0" expanded="false" />
+            <element signature="e#7559#7596#0" expanded="false" />
+            <element signature="method#calMeanWeight#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calEdgeWeight#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#subMining#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#judgeIsMoreMeanWeight#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calWeight#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#printResultGraphInfo#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#printResultGraphInfo#0;class#GSpanTool#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -763,16 +789,27 @@
           <caret line="298" column="32" lean-forward="true" selection-start-line="298" selection-start-column="32" selection-end-line="298" selection-end-column="32" />
           <folding>
             <element signature="docComment;class#GSpanTool#0" expanded="false" />
+            <element signature="method#GSpanTool#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#readDataFile#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#readDataFile#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#calFrequentAndRemove#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calFrequentAndRemove#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#2225#2233#0" expanded="false" />
+            <element signature="e#3568#3587#0" expanded="false" />
             <element signature="docComment;method#sortAndReLabel#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#sortAndReLabel#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#4869#4880#0" expanded="false" />
+            <element signature="docComment;method#freqGraphMining#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#6344#6357#0" expanded="false" />
             <element signature="e#6600#6622#0" expanded="false" />
-            <element signature="e#7514#7551#0" expanded="false" />
+            <element signature="e#7559#7596#0" expanded="false" />
+            <element signature="method#calMeanWeight#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calEdgeWeight#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#subMining#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#judgeIsMoreMeanWeight#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calWeight#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#printResultGraphInfo#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#printResultGraphInfo#0;class#GSpanTool#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -791,16 +828,27 @@
           <caret line="397" column="19" lean-forward="true" selection-start-line="397" selection-start-column="19" selection-end-line="397" selection-end-column="19" />
           <folding>
             <element signature="docComment;class#GSpanTool#0" expanded="false" />
+            <element signature="method#GSpanTool#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#readDataFile#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#readDataFile#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#calFrequentAndRemove#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calFrequentAndRemove#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#2225#2233#0" expanded="false" />
+            <element signature="e#3568#3587#0" expanded="false" />
             <element signature="docComment;method#sortAndReLabel#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#sortAndReLabel#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#4869#4880#0" expanded="false" />
+            <element signature="docComment;method#freqGraphMining#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#6344#6357#0" expanded="false" />
             <element signature="e#6600#6622#0" expanded="false" />
-            <element signature="e#7514#7551#0" expanded="false" />
+            <element signature="e#7559#7596#0" expanded="false" />
+            <element signature="method#calMeanWeight#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calEdgeWeight#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#subMining#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#judgeIsMoreMeanWeight#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calWeight#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#printResultGraphInfo#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#printResultGraphInfo#0;class#GSpanTool#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -884,16 +932,27 @@
           <caret line="365" column="23" lean-forward="true" selection-start-line="365" selection-start-column="23" selection-end-line="365" selection-end-column="23" />
           <folding>
             <element signature="docComment;class#GSpanTool#0" expanded="false" />
+            <element signature="method#GSpanTool#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#readDataFile#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#readDataFile#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#calFrequentAndRemove#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calFrequentAndRemove#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#2225#2233#0" expanded="false" />
+            <element signature="e#3568#3587#0" expanded="false" />
             <element signature="docComment;method#sortAndReLabel#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#sortAndReLabel#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#4869#4880#0" expanded="false" />
+            <element signature="docComment;method#freqGraphMining#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#6344#6357#0" expanded="false" />
             <element signature="e#6600#6622#0" expanded="false" />
-            <element signature="e#7514#7551#0" expanded="false" />
+            <element signature="e#7559#7596#0" expanded="false" />
+            <element signature="method#calMeanWeight#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calEdgeWeight#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#subMining#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#judgeIsMoreMeanWeight#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calWeight#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#printResultGraphInfo#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#printResultGraphInfo#0;class#GSpanTool#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -920,16 +979,27 @@
           <caret line="357" column="37" lean-forward="true" selection-start-line="357" selection-start-column="37" selection-end-line="357" selection-end-column="37" />
           <folding>
             <element signature="docComment;class#GSpanTool#0" expanded="false" />
+            <element signature="method#GSpanTool#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#readDataFile#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#readDataFile#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#calFrequentAndRemove#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calFrequentAndRemove#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#2225#2233#0" expanded="false" />
+            <element signature="e#3568#3587#0" expanded="false" />
             <element signature="docComment;method#sortAndReLabel#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#sortAndReLabel#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#4869#4880#0" expanded="false" />
+            <element signature="docComment;method#freqGraphMining#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#6344#6357#0" expanded="false" />
             <element signature="e#6600#6622#0" expanded="false" />
-            <element signature="e#7514#7551#0" expanded="false" />
+            <element signature="e#7559#7596#0" expanded="false" />
+            <element signature="method#calMeanWeight#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calEdgeWeight#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#subMining#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#judgeIsMoreMeanWeight#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calWeight#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#printResultGraphInfo#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#printResultGraphInfo#0;class#GSpanTool#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -961,7 +1031,7 @@
     <entry file="file://$PROJECT_DIR$/src/DataMining/reallyData.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
-          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -970,13 +1040,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataMining/Edge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
+        <state relative-caret-position="1000">
           <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
           <folding />
         </state>
@@ -984,7 +1053,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataMining/SubChildTraveler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
+        <state relative-caret-position="1600">
           <caret line="41" column="16" lean-forward="false" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
           <folding />
         </state>
@@ -992,7 +1061,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataMining/GraphData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
+        <state relative-caret-position="1840">
           <caret line="92" column="16" lean-forward="false" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
           <folding>
             <element signature="docComment;class#GraphData#0" expanded="false" />
@@ -1006,7 +1075,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataMining/GraphCode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
+        <state relative-caret-position="960">
           <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
           <folding>
             <element signature="e#473#474#0" expanded="true" />
@@ -1017,7 +1086,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataMining/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-600">
+        <state relative-caret-position="760">
           <caret line="28" column="57" lean-forward="false" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
           <folding>
             <element signature="docComment;class#Graph#0" expanded="false" />
@@ -1039,28 +1108,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataMining/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        <state relative-caret-position="200">
+          <caret line="13" column="20" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataMining/GSpanTool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="495" column="24" lean-forward="false" selection-start-line="495" selection-start-column="24" selection-end-line="495" selection-end-column="24" />
+        <state relative-caret-position="360">
+          <caret line="344" column="31" lean-forward="false" selection-start-line="344" selection-start-column="31" selection-end-line="344" selection-end-column="31" />
           <folding>
             <element signature="docComment;class#GSpanTool#0" expanded="false" />
+            <element signature="method#GSpanTool#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#readDataFile#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#readDataFile#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#calFrequentAndRemove#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calFrequentAndRemove#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#2225#2233#0" expanded="false" />
+            <element signature="e#3568#3587#0" expanded="false" />
             <element signature="docComment;method#sortAndReLabel#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#sortAndReLabel#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#4869#4880#0" expanded="false" />
+            <element signature="docComment;method#freqGraphMining#0;class#GSpanTool#0" expanded="false" />
             <element signature="e#6344#6357#0" expanded="false" />
             <element signature="e#6600#6622#0" expanded="false" />
-            <element signature="e#7514#7551#0" expanded="false" />
+            <element signature="e#7559#7596#0" expanded="false" />
+            <element signature="method#calMeanWeight#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calEdgeWeight#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#subMining#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#judgeIsMoreMeanWeight#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#calWeight#0;class#GSpanTool#0" expanded="false" />
             <element signature="docComment;method#printResultGraphInfo#0;class#GSpanTool#0" expanded="false" />
+            <element signature="method#printResultGraphInfo#0;class#GSpanTool#0" expanded="false" />
           </folding>
         </state>
       </provider>

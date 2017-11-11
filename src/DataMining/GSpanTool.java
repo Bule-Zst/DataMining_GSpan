@@ -314,6 +314,8 @@ public class GSpanTool {
 
 		Edge edge;
 		GraphCode gc;
+		int index = 0;
+		resultGraphs.add( null );
 		for (int i = 0; i < newNodeLabelNum; i++) {
 			for (int j = 0; j < newEdgeLabelNum; j++) {
 				for (int k = 0; k < newNodeLabelNum; k++) {
@@ -340,11 +342,18 @@ public class GSpanTool {
 							}
 						}
 						// 对某条满足阈值的边进行挖掘
-						subMining(gc, 2);
+						subMining(gc, 2, index );
+						if( resultGraphs.get(index) != null ) {
+                            index += 1;
+                            resultGraphs.add( null );
+                        }
 					}
 				}
 			}
 		}
+		if( resultGraphs.get(index) == null ) {
+		    resultGraphs.remove( index );
+        }
 		
 		endTime = System.currentTimeMillis();
 		System.out.println("算法执行时间"+ (endTime-startTime) + "ms");
@@ -378,7 +387,7 @@ public class GSpanTool {
 	 * @param next
 	 *            图所含的点的个数
 	 */
-	private void subMining(GraphCode gc, int next) {
+	private void subMining(GraphCode gc, int next, int index ) {
 		Edge e;
 		Graph graph = new Graph();
 		int id1;
@@ -412,7 +421,7 @@ public class GSpanTool {
 
 		// 如果当前是最小编码则将此图加入到结果集中
 		if( judgeIsMoreMeanWeight( graph ) ) {
-            resultGraphs.add(graph);
+            resultGraphs.set( index, graph );
         }
 
 		
@@ -461,10 +470,10 @@ public class GSpanTool {
 
 			if (e1.iy == next) {
 				// 如果边的点id设置是为当前最大值的时候，则开始寻找下一个点
-				subMining(nGc, next + 1);
+				subMining(nGc, next + 1, index);
 			} else {
 				// 如果此点已经存在，则next值不变
-				subMining(nGc, next);
+				subMining(nGc, next, index);
 			}
 		}
 	}
